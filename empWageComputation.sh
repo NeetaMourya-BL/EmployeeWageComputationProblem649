@@ -9,6 +9,7 @@ empRatePerHr=20;
 numWorkingDays=20;
 day=1;
 
+declare -A day
 function calculateWorkingHour() {
 	case $randomCheck in 
                      $isFullTime)
@@ -35,6 +36,7 @@ randomCheck=$((RANDOM%3));
 	salary=$(($empRatePerHr*$wHour));
 	totalSalary=$(($totalSalary+$salary));
 	((day++));
+echo "Employee Working Days: "${day[*]}
 echo "Employee Daily Wage: "${salary[*]}
 echo "Employee Total Wage: "${totalSalary[*]}
 done
