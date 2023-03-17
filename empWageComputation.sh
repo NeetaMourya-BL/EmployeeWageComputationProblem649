@@ -36,8 +36,7 @@ randomCheck=$((RANDOM%3));
 	salary=$(($empRatePerHr*$wHour));
 	totalSalary=$(($totalSalary+$salary));
 	((day++));
-echo "Employee Working Days: "${day[*]}
-echo "Employee Daily Wage: "${salary[*]}
-echo "Employee Total Wage: "${totalSalary[*]}
+	dailyWage[$day]=$(($wHour*$empRatePerHr))
 done
 echo "Employee has earned $totalSalary $ in a month (Total working Hour : $totalWorkingHour)";
+echo ${dailyWage[*]}
