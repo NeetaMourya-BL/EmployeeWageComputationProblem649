@@ -36,14 +36,8 @@ randomCheck=$((RANDOM%3));
 	salary=$(($empRatePerHr*$wHour));
 	totalSalary=$(($totalSalary+$salary));
 	((day++));
-<<<<<<< HEAD
-echo "Employee Working Days: "${day[*]}
-echo "Employee Daily Wage: "${salary[*]}
-echo "Employee Total Wage: "${totalSalary[*]}
-=======
-	dailyWage[$day]=$(($wHour*$empRatePerHr))
 
->>>>>>> UC8-StoreDailyAndTotalWage
+	dailyWage[$day]=$(($wHour*$empRatePerHr))
 done
 array=($salary $totalSalary)
 echo "Employee daily wage: "${dailyWage[*]}
